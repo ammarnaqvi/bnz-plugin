@@ -16,8 +16,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && npm run -s build:rename-js && npm run -s build:rename-css",
-    "build:rename-js": "echo ✔ Rename portal script && cpy \"dist/App.*.js\" \"dist/\" --rename=\"bnz-plugin.js\" --no-overwrite",
-    "build:rename-css": "echo ✔ Rename portal styles && cpy \"dist/App.*.css\" \"dist/\" --rename=\"bnz-plugin.css\" --no-overwrite",
+    "build:rename-js": "echo ✔ Rename portal script && cpy \"build/App.*.js\" \"build/\" --rename=\"bnz-plugin.js\" --no-overwrite",
+    "build:rename-css": "echo ✔ Rename portal styles && cpy \"build/App.*.css\" \"build/\" --rename=\"bnz-plugin.css\" --no-overwrite",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

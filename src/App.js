@@ -32,14 +32,14 @@ const bNZPluginInterface = {
 function loadScript(url, callback) {
   const scriptTag = document.createElement('script');
   scriptTag.async = true;
-  scriptTag.src = url;
-
   scriptTag.onload = callback;
+  scriptTag.src = url;
+  
   scriptTag.onerror = () => {
       throw new Error('APIMatic: Failed to load ' + url);
   };
 
-  document.getElementsByTagName('head')[0].appendChild(scriptTag);
+  document.head.appendChild(scriptTag);
 }
 
 window.BNZPlugin = bNZPluginInterface;
